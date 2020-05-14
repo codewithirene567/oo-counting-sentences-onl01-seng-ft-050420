@@ -17,8 +17,7 @@ attr_accessor :sentence
   end
 
   def count_sentences
-    self.split(/[.?!]/).reject {|sentence| sentence.empty?}.size
-    
+   
     sentence_array = self.split(/[.?!]/)
     sentence_array.delete_if{|sentence| sentence.empty?}
     sentence_array.length

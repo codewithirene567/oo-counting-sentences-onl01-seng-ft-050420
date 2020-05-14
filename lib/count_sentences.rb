@@ -17,7 +17,7 @@ attr_accessor :sentence
   end
 
   def count_sentences
-    self.split(/[.?!]/).reject {|sentence| sentence.empty?}.size
+    self.split(/[.?!]/) {|sentence| sentence.empty?}.size
     
     #using a regexp, anything in the slash marks with the array of sentence endings is the pattern they are looking for so that they can split them
   end
